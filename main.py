@@ -2,8 +2,6 @@
 import streamlit as st
 import pandas as pd
 import subprocess
-subprocess.run(["pip", "install", "openpyxl"])
-import openpyxl
 
 
 # Estilos CSS personalizados
@@ -52,7 +50,7 @@ st.title("📄 Archivo Marta Traba")
 archivo = "mt.xlsx"
 
 try:
-    df = pd.read_excel(archivo)
+    df = pd.read_excel(archivo, engine="openpyxl")
 
 
     # Verificar columnas disponibles
