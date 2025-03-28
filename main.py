@@ -1,6 +1,8 @@
 
 import streamlit as st
 import pandas as pd
+import subprocess
+subprocess.run(["pip", "install", "openpyxl"])
 import openpyxl
 
 
@@ -50,7 +52,7 @@ st.title("📄 Archivo Marta Traba")
 archivo = "mt.xlsx"
 
 try:
-    df = pd.read_excel(archivo, engine="openpyxl")
+    df = pd.read_excel(archivo)
 
 
     # Verificar columnas disponibles
