@@ -50,7 +50,8 @@ st.title("📄 Archivo Marta Traba")
 archivo = "mt.xlsx"
 
 try:
-    df = pd.read_excel(archivo)
+    df = pd.read_excel(archivo, engine="openpyxl")
+
 
     # Verificar columnas disponibles
     columnas_requeridas = [
